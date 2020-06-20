@@ -1,0 +1,42 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %}Upload PDF{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h1>Upload PDF</h1>
+            <hr>
+
+            <form action="/upload-pdf" method = "POST" enctype = "multipart/form-data">
+
+                <div class = "form-group">
+                    <label>Select PDF</label>
+                    <div class = "custom-file">
+                        <input oninput="filesize(this);" type = "file" class = "custom-file-input" name = "pdf" id = "pdf">
+                        <label class = "custom-file-label" for="pdf">Select PDF</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload PDF</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+<script>
+    function filesize(elem){
+    console.log(elem.files[0].size)
+    }
+
+
+</script>
+
+{% endblock %}

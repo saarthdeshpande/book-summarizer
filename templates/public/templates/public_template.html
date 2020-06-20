@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Import the Bootstrap stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <!-- Import our custom stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+
+  <main>
+    {% block main %}{% endblock %}
+  </main>
+
+  <!-- Import jquery 3.3.1 slim min -->
+  <script src="{{ url_for('static', filename='js/jquery.slim.min.js') }}"></script>
+  <!-- Import Bootstrap bundle -->
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <!-- Import our custom JavaScript -->
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block script %}{% endblock %}
+</body>
+
+</html>
