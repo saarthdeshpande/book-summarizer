@@ -1,6 +1,6 @@
 {% extends "public/templates/public_template.html" %}
 
-{% block title %}Upload PDF{% endblock %}
+{% block title %}Book Summarization{% endblock %}
 
 {% block main %}
 
@@ -9,22 +9,26 @@
         <div class="col">
 
             <h1 align="center">Book Summarization</h1>
-            <p align = "center">Created by: <a href = "https://www.linkedin.com/in/shanay-ghag-0881b319a/">Shanay Ghag</a> and <a href = "https://www.linkedin.com/in/saarthdeshpande/">Saarth Deshpande</a></p>
+            <p align="center">Created by: <a href="https://www.linkedin.com/in/shanay-ghag-0881b319a/">Shanay Ghag</a>
+                and <a href="https://www.linkedin.com/in/saarthdeshpande/">Saarth Deshpande</a></p>
             <hr>
-
-            <form action="/upload-pdf" method = "POST" enctype = "multipart/form-data">
-                <div class = "form-group">
+            <form  enctype="multipart/form-data" id = "submit-form">
+                <div class="form-group" align="center">
                     <p>
-                        Upload the PDF of a book to summarize.
-                        A ZIP file containing the chapter-wise summaries will be downloaded.
+                        Upload the PDF of a book to summarize. <br>
+                        A ZIP file containing the chapter-wise summaries will be mailed to you in 5-7 minutes.
                     </p>
-                    <div class = "custom-file">
+                    <div class="custom-file" align="center">
+                        <label>Email ID: </label>
+                        <input type="email" name="email" id="email" required>
                         <label>Upload PDF: </label>
-                        <input type = "file" class = "custom-file-input" name = "pdf" id = "pdf">
+                        <input type="file" class="custom-file-input" name="pdf" id="pdf">
                     </div>
+                    <br>
+                    <button style="margin:auto;display:block" onClick="myFunction(event)" type="submit"
+                            class="btn btn-primary">Submit PDF
+                    </button>
                 </div>
-                <br>
-                <button style="margin:auto;display:block" onclick="alert( {{ msg }} )" type="submit" class="btn btn-primary">Upload PDF</button>
             </form>
 
         </div>
@@ -32,3 +36,60 @@
 </div>
 
 {% endblock %}
+
+{% block script %}
+
+<script>
+
+        function ValidateEmail(mail)
+        {
+          if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+          {
+            return (true)
+          }
+           alert("Invalid email address!")
+           return (false)
+         }
+
+        function myFunction(e){
+        e.preventDefault()
+        var file = document.getElementById('pdf').files[0]
+        var mailid = document.getElementById('email').value
+
+        if(!file){
+        alert("PDF must have a filename.");
+        return;
+        }
+
+        if(!ValidateEmail(mailid)){
+        return;
+        }
+        if(!file.type.match('application/pdf')){
+            alert('Incorrect extension. Please upload a PDF.');
+            return;
+        }
+        if (file.size >= 20000000 ) {
+            alert('Size limit exceeded.\nMax size allowed: 20 Mb.');
+            return;
+        }
+
+        var formData = new FormData();
+        formData.append('email', $('#email').val())
+        formData.append('pdf', $('#pdf')[0].files[0])
+
+        $.ajax({
+           url : '/upload-pdf',
+           type : 'POST',
+           data : formData,
+           processData: false,  // tell jQuery not to process the data
+           contentType: false,  // tell jQuery not to set contentType
+           success : function(data) {
+               alert('Upload successful.\nEmail is being processed.\nThank you.');
+               $('#submit-form').trigger("reset");
+            }
+        });
+    }
+</script>
+
+{% endblock %}
+
