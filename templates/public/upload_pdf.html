@@ -18,18 +18,21 @@
                         Upload the PDF of a book to summarize. <br>
                         A ZIP file containing the chapter-wise summaries will be mailed to you in 5-7 minutes.
                     </p>
-                    <div class="custom-file" align="center">
-                        <label>Email ID: </label>
-                        <input type="email" name="email" id="email" required>
-                        <label>Upload PDF: </label>
-                        <input type="file" class="custom-file-input" name="pdf" id="pdf">
+                    <label>Email ID: </label>
+                    <input type="email" name="email" id="email">
+                    <br>
+                    <br>
+                    <div class="custom-file pdf" align="center">
+                        <input type="file" name="pdf" id="pdf" class="custom-file-input">
+                        <label class="custom-file-label" for="pdf" text-align="center">Upload PDF</label>
                     </div>
                     <br>
-                    <button style="margin:auto;display:block" onClick="myFunction(event)" type="submit"
-                            class="btn btn-primary">Submit PDF
-                    </button>
+                    <br>
+                    <button style="margin:auto;display:block" onClick="myFunction(event)"
+                    type="submit" class="btn btn-primary">Submit PDF </button>
                 </div>
             </form>
+
 
         </div>
     </div>
@@ -40,6 +43,11 @@
 {% block script %}
 
 <script>
+
+         $(".custom-file-input").on("change", function() {
+          var fileName = $(this).val().split("\\").pop();
+          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
 
         function ValidateEmail(mail)
         {
@@ -88,6 +96,7 @@
                $('#submit-form').trigger("reset");
             }
         });
+
     }
 </script>
 
