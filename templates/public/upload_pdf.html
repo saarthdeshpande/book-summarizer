@@ -4,16 +4,23 @@
 
 {% block main %}
 
+<header class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="jumbotron" align="center">Book Summarization</h1>
+                <p align="center">Created by: <a href="https://www.linkedin.com/in/shanay-ghag-0881b319a/">Shanay Ghag</a>
+                    and <a href="https://www.linkedin.com/in/saarthdeshpande/">Saarth Deshpande</a></p>
+            </div>
+        </div>
+    </div>
+</header>
 <div class="container">
-    <div class="row">
-        <div class="col">
-
-            <h1 align="center">Book Summarization</h1>
-            <p align="center">Created by: <a href="https://www.linkedin.com/in/shanay-ghag-0881b319a/">Shanay Ghag</a>
-                and <a href="https://www.linkedin.com/in/saarthdeshpande/">Saarth Deshpande</a></p>
-            <hr>
+        <div class="row">
+            <div class="col">
             <form  enctype="multipart/form-data" id = "submit-form">
                 <div class="form-group" align="center">
+                    <br>
                     <p>
                         Upload the PDF of a book to summarize. <br>
                         A ZIP file containing the chapter-wise summaries will be mailed to you in 5-7 minutes.
@@ -32,11 +39,18 @@
                     type="submit" class="btn btn-primary">Submit PDF </button>
                 </div>
             </form>
-
-
         </div>
     </div>
 </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p>Source Code: <a href="https://github.com/saarthdeshpande/book-summarizer">GitHub</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 {% endblock %}
 
