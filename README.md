@@ -1,5 +1,5 @@
 # Book-Summarizer
-<b>NLP-based</b> book summarizer which summarises the book chapter-wise.
+<b>NLP-based</b> book summarizer which summarises the book chapter-wise.<br>
 In case the book does not contain chapters: the entire book is summarized.
 
 Why summarize a book?
