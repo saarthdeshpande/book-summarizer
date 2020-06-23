@@ -20,12 +20,16 @@ How does the summarizer work?
 How to run the Flask app:
 <ol>
 <li>Clone the repository.</li>
+  
 ```
 git clone https://github.com/saarthdeshpande/book-summarizer.git
 ```
+
 <li>Install all the dependencies mentioned in the <b>requirements.txt</b></li>
+
 ```
 pip install -r requirements.txt
 ```
+
 <li>Run <b>views.py</b> </li>
 </ol>
