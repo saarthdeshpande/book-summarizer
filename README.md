@@ -18,6 +18,7 @@ How the summarizer works?
 
 How to run the Flask app :
 <ol>
+<li>Clone the repository.</li>
 <li>Install all the dependencies mentioned in the <b>requirements.txt</b></li>
 <li>Run <b>views.py</b> </li>
 </ol>
