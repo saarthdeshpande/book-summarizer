@@ -31,5 +31,12 @@ git clone https://github.com/saarthdeshpande/book-summarizer.git
 pip install -r requirements.txt
 ```
 
+<li>Update the value of <b>sender_address</b> and <b>sender_pass</b> in <b>mail.py</b> </li>
+
 <li>Run <b>views.py</b> </li>
+
+```
+python3 views.py
+```
+
 </ol>
