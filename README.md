@@ -25,15 +25,15 @@ How to run the Flask app:
 git clone https://github.com/saarthdeshpande/book-summarizer.git
 ```
 
-<li>Install all the dependencies mentioned in the <b>requirements.txt</b></li>
+<li>Install all the dependencies mentioned in the <b>requirements.txt</b>.</li>
 
 ```
 pip install -r requirements.txt
 ```
 
-<li>Update the value of <b>sender_address</b> and <b>sender_pass</b> in <b>mail.py</b> </li>
+<li>Update the value of <b>sender_address</b> and <b>sender_pass</b> in <b>mail.py</b>.</li>
 
-<li>Run <b>views.py</b> </li>
+<li>Run <b>views.py</b>.</li>
 
 ```
 python3 views.py
