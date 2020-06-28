@@ -44,8 +44,9 @@ python3 views.py
 **Screenshots**
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/homepage.png">
+  <img width="640" height="480" src="https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/homepage.png">
 </p>
 
-
-![Mail Output](https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/mail.png)
+<p align="center">
+  <img width="640" height="480" src="https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/mail.png">
+</p>
