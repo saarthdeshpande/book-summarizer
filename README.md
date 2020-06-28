@@ -44,9 +44,11 @@ python3 views.py
 **Screenshots**
 
 <p align="center">
+  <b>Home Page</b><br><br>
   <img width="640" height="480" src="https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/homepage.png">
 </p>
 
 <p align="center">
+  <b>Mail on Successful Processing</b><br><br>
   <img width="640" height="480" src="https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/mail.png">
 </p>
