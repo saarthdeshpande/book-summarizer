@@ -40,3 +40,7 @@ python3 views.py
 ```
 
 </ol>
+
+![Home Page](https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/homepage.png)
+
+![Mail Output](https://github.com/saarthdeshpande/book-summarizer/blob/master/screenshots/mail.png)
