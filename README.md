@@ -17,7 +17,7 @@ How does the summarizer work?
 <li>The summary-ids are decoded to text using <i>decode()<i> function from the <i><b>T5Tokenizer</b></i>.</li>
 </ul>
 
-How to run the Flask app:
+How to run the book summarizer:
 <ol>
 <li>Clone the repository.</li>
   
@@ -30,14 +30,22 @@ git clone https://github.com/saarthdeshpande/book-summarizer.git
 ```
 pip install -r requirements.txt
 ```
+<li>To run via CLI:</li>
 
-<li>Update the value of <b>sender_address</b> and <b>sender_pass</b> in <b>mail.py</b>.</li>
-
-<li>Run <b>views.py</b>.</li>
+```
+python3 bsCLI.py --path <path-to-PDF-file>
+```
+<li>To run on Flask server with frontend and mail:
+    <ol>
+        <li>Update the value of <b>sender_address</b> and <b>sender_pass</b> in <b>mail.py</b>.</li>
+        <li>Run <b>views.py</b>.</li>
 
 ```
 python3 views.py
 ```
+</ol>
+</li>
+
 
 </ol>
 
