@@ -18,7 +18,7 @@ joblib==0.15.1
 kombu==4.6.10
 MarkupSafe==1.1.1
 nltk==3.6.6
-numpy==1.18.5
+numpy==1.21.0
 packaging==20.4
 pdfminer==20191125
 pipenv==2022.1.8
